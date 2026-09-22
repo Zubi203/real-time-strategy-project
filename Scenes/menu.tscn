@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://biky1ptyc5i61"]
+
+[ext_resource type="Texture2D" uid="uid://e33ukyq7vfg4" path="res://Sprites/Backgrounds/menu_background.png" id="1_1rerr"]
+[ext_resource type="Script" uid="uid://vtyxvnw1dixj" path="res://Scenes/main_menu.gd" id="1_xhh6f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xhh6f"]
+font_size = 48
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.7490196)
+
+[node name="Menu" type="Control" unique_id=568330601]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhh6f")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1592271716]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1rerr")
+
+[node name="Label" type="Label" parent="." unique_id=1625179754]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -68.0
+offset_right = 97.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Real Time Strategy Game"
+label_settings = SubResource("LabelSettings_xhh6f")
+
+[node name="PlayButton" type="Button" parent="." unique_id=532109988]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -11.0
+offset_right = 79.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1017232365]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = 67.0
+offset_right = 79.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

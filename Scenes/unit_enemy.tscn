@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://gnwjljtwbx5i"]
+
+[ext_resource type="PackedScene" uid="uid://edp5i0lmbwsk" path="res://Scenes/unit_base.tscn" id="1_ir1c4"]
+[ext_resource type="Script" uid="uid://d1kbtiun8lhe5" path="res://enemy_ai.gd" id="2_jo3qr"]
+[ext_resource type="Texture2D" uid="uid://ddkupda54oyts" path="res://Sprites/Characters/tile_0122.png" id="3_p2fto"]
+
+[node name="UnitEnemy" unique_id=1519747600 groups=["UnitEnemy"] instance=ExtResource("1_ir1c4")]
+move_speed = 20.0
+team = 1
+
+[node name="EnemyAI" type="Node" parent="." index="0" unique_id=245107954]
+script = ExtResource("2_jo3qr")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1312636677]
+texture = ExtResource("3_p2fto")
